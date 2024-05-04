@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const router = require("./router");
+const port = process.env.PORT || 4000;
 
 
 
@@ -23,11 +24,7 @@ console.log("Data connected")
 })
 
 
-
-
-
-app.listen(4000, () => {
-
+app.listen(port, () => {
     console.log("server is listening on port 4000");
 
 })

@@ -72,7 +72,7 @@ const updateContent = async (req, res) => {
     try {
 
         let id = req.params.id;
-        let contentData = await content.findByIdAndDelete(id, req.body);
+        let contentData = await content.findByIdAndUpdate(id, req.body);
         if (contentData) {
             res.status(200).json({ message: "content updated successfully", success: true });
         }

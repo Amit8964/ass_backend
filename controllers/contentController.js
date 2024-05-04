@@ -22,6 +22,10 @@ const validator = async (req, res, next) => {
             }
 
         }
+        else{
+            next();
+
+        }
     }
     catch (err) {
 
